@@ -2,7 +2,7 @@ on textualcmd()
     set np to "is listening to Enrei's dad moaning"
     if isRunning("iTunes") then
         tell application "iTunes"
-            if player state is playing then set np to "is now playing " & artist of current track & " - " & name of current track & " (" & album of current track & ")"
+            if player state is playing then set np to "is now playing: " & artist of current track & " - " & name of current track & " (" & album of current track & ")"
         end tell
     end if
     return "/me " & np
